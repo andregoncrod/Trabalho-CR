@@ -1,4 +1,4 @@
-function nums = percorre_grelha(matriz)
+function NUMS = percorre_grelha(matriz)
 flag = 0;
 imgcount=0;
 [lin, col] = size(matriz);
@@ -7,14 +7,16 @@ y_inicial = 1;
 x_final = 1;
 y_final = 1;
 i=1;
+NUMS={};
+linhas_nums=1;
 
 while i ~= lin
-    colunas=0;
+    colunas_nums=0;
     j=1;
     while j ~= col
         if(matriz(i,j) == 1)
             imgcount = imgcount + 1;
-            colunas = colunas + 1;
+            colunas_nums = colunas_nums + 1;
             x_inicial = i;
             y_inicial = j;
             for k = x_inicial: lin
@@ -41,13 +43,15 @@ while i ~= lin
                 end
                 k = k + 1;
             end
-            t1=num2str(imgcount);
-            t2=strcat('TE',t1);
-            imwrite(nums, t2, 'bmp');
+            NUMS{linhas_nums,colunas_nums}=nums;
+            %t1=num2str(imgcount);
+            %t2=strcat('TE',t1);
+            %imwrite(nums, t2, 'bmp');
 
             j = y_final;
         end
-        if(colunas == 9)
+        if(colunas_nums == 9)
+            linhas_nums = linhas_nums + 1;
             i = x_final + 1;
             break;
         end

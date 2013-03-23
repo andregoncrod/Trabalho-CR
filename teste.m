@@ -1,4 +1,4 @@
-function teste()
+function NUMS=teste()
 
 clc;
 
@@ -8,6 +8,6 @@ matriz = limpa_matriz(a);
 
 imwrite(matriz, 'Teste_2', 'BMP');
 
-numeros = percorre_grelha(matriz);
+NUMS = percorre_grelha(matriz);
 
 end
