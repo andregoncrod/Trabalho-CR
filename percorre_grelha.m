@@ -49,6 +49,7 @@ while i ~= lin
                 end
                 k = k + 1;
             end
+%<<<<<<< HEAD
             NUMS{linhas_nums,colunas_nums}=nums;    %guardar array de pixeis do numero analisado no array de celulas
             %criação da imagem do numero actual com o nome e numro da
             %imagem
@@ -58,6 +59,21 @@ while i ~= lin
             imwrite(nums, t3);
 
             j = y_final;    %alterar o j para saltar o espaço branco do numero ja guardado, avançar nas colunas
+%=======
+            
+            NUMS{linhas_nums,colunas_nums}=nums;
+            t1=num2str(imgcount);
+            t2=strcat(t1,'.bmp');
+            t3=strcat('testes/',t2);
+            
+            numTESTE = swap(nums);
+            BW3 = bwmorph(numTESTE,'thin',Inf);
+            numDONE = swap(BW3);
+            %BW3 = bwmorph(numDONE,'thin',Inf);
+            imwrite(numDONE, t3);
+            
+            j = y_final;
+%>>>>>>> Reduzir numeros um pixel de largura
         end
         if(colunas_nums == 9)   %apos chegar ao fim de uma linha de numeros, 9 
             linhas_nums = linhas_nums + 1;  %incrementar a linha na matriz de celulas

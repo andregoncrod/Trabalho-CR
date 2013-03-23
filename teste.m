@@ -2,7 +2,7 @@ function NUMS=teste()
 
 clc;
 
-[a, map] = imread('images.bmp');
+[a, map] = imread('sudokudavid.bmp');
 
 matriz = limpa_matriz(a);
 
