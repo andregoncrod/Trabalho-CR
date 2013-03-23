@@ -44,9 +44,10 @@ while i ~= lin
                 k = k + 1;
             end
             NUMS{linhas_nums,colunas_nums}=nums;
-            %t1=num2str(imgcount);
-            %t2=strcat('TE',t1);
-            %imwrite(nums, t2, 'bmp');
+            t1=num2str(imgcount);
+            t2=strcat(t1,'.bmp');
+            t3=strcat('testes/',t2);
+            imwrite(nums, t3);
 
             j = y_final;
         end
