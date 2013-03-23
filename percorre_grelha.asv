@@ -9,12 +9,10 @@ y_final = 1;
 i=1;
 
 while i ~= lin
-    colunas=0;
     j=1;
     while j ~= col
         if(matriz(i,j) == 1)
-            imgcount = imgcount + 1;
-            colunas = colunas + 1;
+            imgcount= imgcount + 1;
             x_inicial = i;
             y_inicial = j;
             for k = x_inicial: lin
@@ -41,18 +39,18 @@ while i ~= lin
                 end
                 k = k + 1;
             end
-            t1=num2str(imgcount);
-            t2=strcat('TE',t1);
-            imwrite(nums, t2, 'bmp');
+            %t1=num2str(imgcount);
+            %t2=strcat('TE',t1);
+            %imwrite(nums, t2, 'bmp');
 
             j = y_final;
         end
-        if(colunas == 9)
-            i = x_final + 1;
-            break;
-        end
+        %%if(imgcount == 9)
+          %%  i = x_final + 1;
+        %end
         j = j +1 ;
     end
+    i
     i = i + 1;
 end
 end

@@ -1,6 +1,6 @@
 function matriz = limpa_matriz(aux)
 flag_paragem = 0;
-[lin,col] = size(aux)
+[lin,col] = size(aux);
 x_inicial = 0;
 y_inicial = 0;
 x_final = 0;
@@ -12,8 +12,8 @@ y_final = 0;
         for j=1: col
             if(aux(i,j) == 0)
                 flag_paragem = 1;
-                x_inicial = i
-                y_inicial = j
+                x_inicial = i;
+                y_inicial = j;
                 break;
             end
         end
@@ -29,8 +29,8 @@ flag_paragem = 0;
         for j=col:-1: 1
             if(aux(i,j) == 0)
                 flag_paragem = 1;
-                x_final = i
-                y_final = j
+                x_final = i;
+                y_final = j;
                 break;
             end
         end
