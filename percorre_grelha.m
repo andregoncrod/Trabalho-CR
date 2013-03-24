@@ -50,18 +50,16 @@ while i ~= lin
                 k = k + 1;
             end
 %<<<<<<< HEAD
-            NUMS{linhas_nums,colunas_nums}=nums;    %guardar array de pixeis do numero analisado no array de celulas
+            %NUMS{linhas_nums,colunas_nums}=nums;    %guardar array de pixeis do numero analisado no array de celulas
             %criação da imagem do numero actual com o nome e numro da
             %imagem
-            t1=num2str(imgcount);
-            t2=strcat(t1,'.bmp');
-            t3=strcat('testes/',t2);
-            imwrite(nums, t3);
+            %t1=num2str(imgcount);
+            %t2=strcat(t1,'.bmp');
+            %t3=strcat('testes/',t2);
+            %imwrite(nums, t3);
 
-            j = y_final;    %alterar o j para saltar o espaço branco do numero ja guardado, avançar nas colunas
+            %j = y_final;    %alterar o j para saltar o espaço branco do numero ja guardado, avançar nas colunas
 %=======
-            
-            NUMS{linhas_nums,colunas_nums}=nums;
             t1=num2str(imgcount);
             t2=strcat(t1,'.bmp');
             t3=strcat('testes/',t2);
@@ -71,6 +69,7 @@ while i ~= lin
             numDONE = swap(BW3);
             %BW3 = bwmorph(numDONE,'thin',Inf);
             imwrite(numDONE, t3);
+            NUMS{linhas_nums,colunas_nums}=numDONE;
             
             j = y_final;
 %>>>>>>> Reduzir numeros um pixel de largura
