@@ -2,7 +2,7 @@ function [ output_args ] = templates( input_args )
 %TEMPLATES Summary of this function goes here
 %   Detailed explanation goes here
 for i=1 : 10
-    string='C:\Users\PC\Desktop\Template1\';
+    string='C:\Users\PC\Desktop\Template3\';
     string1=num2str(i);
     string1=strcat(string,string1);
     string2=strcat(string1,'.bmp');
@@ -17,7 +17,7 @@ for i=1 : 10
     imgfinal=imresize(imgfinal,[15 15]);
     imgfinal=swap(imgfinal);
     
-    string3='C:\Users\PC\Desktop\Template2\';
+    string3='C:\Users\PC\Desktop\Template3_personalizado\';
     string4=num2str(i);
     string5=strcat(string3,string4);
     string6=strcat(string5,'.bmp');
