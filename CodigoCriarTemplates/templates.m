@@ -14,7 +14,7 @@ for i=1 : 10
     threshold = graythresh(imgdone);
     imgdone =~im2bw(imgdone,threshold);
     [imgfinal,l]=lines(imgdone);
-    imgfinal=imresize(imgfinal,[40 40]);
+    imgfinal=imresize(imgfinal,[15 15]);
     imgfinal=swap(imgfinal);
     
     string3='C:\Users\PC\Desktop\Template2\';
