@@ -67,10 +67,18 @@ while i ~= lin
             numTESTE = swap(nums);
             BW3 = bwmorph(numTESTE,'thin',Inf);
             numDONE = swap(BW3);
+            threshold = graythresh(numDONE);
+            numDONE =~im2bw(numDONE,threshold);
+            if(verifica_se_zero(numDONE)==0)
+                [FINAL,L]=lines(numDONE);
+                FINAL=imresize(FINAL,[15 15]);
+                FINAL=swap(FINAL);
+                imwrite(FINAL, t3);
+                NUMS{linhas_nums,colunas_nums}=FINAL;
+            end
+            %imshow(FINAL);
             %BW3 = bwmorph(numDONE,'thin',Inf);
-            imwrite(numDONE, t3);
-            NUMS{linhas_nums,colunas_nums}=numDONE;
-            
+    
             j = y_final;
 %>>>>>>> Reduzir numeros um pixel de largura
         end
